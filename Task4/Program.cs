@@ -10,6 +10,18 @@ namespace Task4
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.Unicode;
+
+            Console.WriteLine("Enter the key to activate mode: pro/expert/ or sth else");
+            string key = Console.ReadLine();
+
+            DocumentWorker docWork1 = DocumentWorker.InitializeDocument(key);
+
+            Console.WriteLine();
+            docWork1.OpenDocument();
+            docWork1.EditDocument();
+            docWork1.SaveDocument();
+            Console.WriteLine();
         }
     }
 }
